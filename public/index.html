@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test_task_ItProfit</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <h1>Форма обратной связи</h1>
+            <form action="#" id="form" name="form">
+                <div class="input-box">                   
+                    <input required name="name" id="name" type="text" placeholder="Ваше имя" data-reg="^[а-яА-ЯёЁa-zA-Z]{1,20}$"/>
+                    <label class="info" for="name">Имя на кириллице или латинице</label>
+                </div>
+                <div class="input-box">
+                    <input required name="email" id="email" type="email" placeholder="Введите email" data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" />
+                    <label class="info" for="email">Email в формате user@mail.ru</label>
+                </div>
+                <div class="input-box">
+                    <input required name="phone" id="phone" class="phone" type="text" placeholder="Введите телефон" data-reg="\(?\d\d\)?\s?\d\d(?:\d[\-\s]\d\d[\-\s]\d\d|[\-\s]\d\d[\-\s]\d\d\d|\d{7})" />
+                    <label class="info" for="phone">Номер в формате (33/44/29)xxx-xx-xx</label>
+                </div>
+                <div class="input-box message-box">
+                    <textarea required placeholder="Сообщение" class="msg" name="msg"></textarea>
+                </div>
+                <div class="buttons">
+                    <button class="send" type="submit" id="send">Отправить</button>
+                    <button class="modal_open" id="modal_open" type="button">Клик</button>
+                </div>
+            </form>
+            
+            <dialog class="modal_window">
+                <div class="modal_content">
+                    <h2>Отлично!</h2>
+                    <p>Вы сделали то, что было необходимо.</p>
+                    <button class="modal_close">Закрыть</button> 
+                </div>
+            </dialog>
+            
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

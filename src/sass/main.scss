@@ -1,0 +1,119 @@
+ $base-color: #e7f6ff;
+ $wrapper-color: #ffffff;
+
+ * {
+    font-family: Arial, Helvetica, sans-serif; 
+ }
+
+ body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: $base-color;
+ }
+
+ .wrapper {
+    width: 450px;
+    height: 500px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-left: -225px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+    background-color: $wrapper-color;
+
+    h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .content {
+        padding: 15px;
+
+        .input-box { 
+            height: 50px; 
+            width: 90%; 
+            margin-bottom: 20px; 
+            
+            input, textarea {
+                height: 100%; 
+                width: 100%; 
+                border: none; 
+                border-radius: 5px; 
+                background: $base-color; 
+                padding: 0 20px; 
+                outline:none;
+            }
+
+            textarea {
+                resize: none; 
+                padding: 20px;
+                font-family: Arial, Helvetica, sans-serif; 
+            }
+
+            label {
+                font-size: 10px;
+                color: #aca4c2;
+                margin-left: 10px;
+            }     
+        }
+
+        .message-box {
+            min-height: 90px; 
+          }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .send, .modal_open, .modal_close {
+            color: #fff;
+            font-size: 16px;
+            margin-top: 40px;
+            background: #aca4c2;
+            outline: none;
+            cursor: pointer;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 7px;
+            transition: 0.5s;
+            &:hover {
+                background: #756b91;
+            }   
+        } 
+
+        .modal_window {
+            padding: 0;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            border: 0;
+            border-radius: 20px;
+            text-align: center;
+            display: block;
+            transform: scale(.2);
+            opacity: 0;
+            transition: all 0.3s linear;
+            visibility: hidden;
+            &::backdrop {
+                background-color: #252525;
+                opacity: 0.9;
+            }
+            &[open] {
+                transform: scale(1);
+                opacity: 1;
+                visibility: visible; 
+            }
+
+            .modal_content {
+                background-color: #fff;
+                padding: 10px;  
+            }
+        }     
+    }
+ }
+
+
